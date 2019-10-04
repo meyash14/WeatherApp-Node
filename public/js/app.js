@@ -1,4 +1,4 @@
-console.log("js loaded")
+
 /*fetch('http://localhost:3000/weather?address=Boston').then((response)=>{
     response.json().then((data)=>{
         if(data.error)
