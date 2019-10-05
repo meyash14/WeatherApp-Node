@@ -18,12 +18,12 @@ app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
 
 // Setup static directory to serve
-app.use(express.static(__dirname + '/public'));
+//app.use(express.static(__dirname + '/public'));
 
-//app.use(express.static(publicDirectoryPath))
+app.use(express.static(publicDirectoryPath))
 
 app.get('/', function(request, response) {
-    response.render('index');
+    response.send('Hello World!');
     });
 // app.get('', (req, res) => {
 //     res.render('index', {
