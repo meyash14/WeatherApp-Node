@@ -2,6 +2,7 @@
 //express only looks for directory named views so its name has to remain views
 const express = require ('express')
 const app = express()
+const port = process.env.PORT || 3000 //PORT dfined for running on heroku.given or for running on local if heroku not there
 const path = require('path')
 const hbs = require('hbs')
 const test = process.cwd()
@@ -124,7 +125,7 @@ app.get('*',(req,res)=>{     // * is the wild charactar
 
 
  //all things that will be exposed to browser need to be in public folder :HTML,CSS,JS
-app.listen(3000,()=>{
-    console.log('Server is up on port 3000')
+app.listen(port,()=>{
+    console.log('Server is up on port '+ port)
 }) 
 
