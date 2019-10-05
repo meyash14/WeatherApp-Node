@@ -2,7 +2,7 @@ const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
 const geocode = require('./utils/geocode')
-const forecast = require('./utils/forecast')
+const forecast = require('./utils/weather')
 //
 const app = express()
 const port = process.env.PORT || 3000
@@ -32,34 +32,8 @@ app.get('', (req, res) => {
 
 
 
-app.get('/products', (req, res) => {
-    if (!req.query.search) {
-        return res.send({
-            error: 'You must provide a search term'
-        })
-    }
 
-    console.log(req.query.search)
-    res.send({
-        products: []
-    })
-})
 
-app.get('/help/*', (req, res) => {
-    res.render('404', {
-        title: '404',
-        name: 'Andrew Mead',
-        errorMessage: 'Help article not found.'
-    })
-})
-
-app.get('*', (req, res) => {
-    res.render('404', {
-        title: '404',
-        name: 'Andrew Mead',
-        errorMessage: 'Page not found.'
-    })
-})
 
 app.listen(port, () => {
     console.log('Server is up on port ' + port)
