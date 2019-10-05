@@ -22,15 +22,15 @@ app.use(express.static(__dirname + '/public'));
 
 //app.use(express.static(publicDirectoryPath))
 
-app.get('/', function(request, response) {
-    response.send('Hello World!');
-    });
-// app.get('', (req, res) => {
-//     res.render('index', {
-//         title: 'Weather',
-//         name: 'Andrew Mead'
-//     })
-// })
+// app.get('/', function(request, response) {
+//     response.send('Hello World!');
+//     });
+app.get('', (req, res) => {
+    res.render('index', {
+        title: 'Weather',
+        name: 'Andrew Mead'
+    })
+})
 
 // app.get('/about', (req, res) => {
     
