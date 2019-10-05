@@ -18,8 +18,13 @@ app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
 
 // Setup static directory to serve
-app.use(express.static(publicDirectoryPath))
+app.use(express.static(__dirname + '/public'));
 
+//app.use(express.static(publicDirectoryPath))
+
+app.get('/', function(request, response) {
+    response.send('Hello World!');
+    });
 // app.get('', (req, res) => {
 //     res.render('index', {
 //         title: 'Weather',
@@ -27,13 +32,13 @@ app.use(express.static(publicDirectoryPath))
 //     })
 // })
 
-app.get('/about', (req, res) => {
-    res.send('Hello')
-    // res.render('about', {
-    //     title: 'About Me',
-    //     name: 'Andrew Mead'
-    // })
-})
+// app.get('/about', (req, res) => {
+    
+//     // res.render('about', {
+//     //     title: 'About Me',
+//     //     name: 'Andrew Mead'
+//     // })
+// })
 
 // app.get('/help', (req, res) => {
 //     res.render('help', {
