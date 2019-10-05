@@ -3,16 +3,23 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "node src/app.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@google/maps": "^1.0.1",
     "express": "^4.17.1",
     "hbs": "^4.0.4",
     "request": "^2.88.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meyash14/WeatherApp-Node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meyash14/WeatherApp-Node/issues"
+  },
+  "homepage": "https://github.com/meyash14/WeatherApp-Node#readme"
 }
