@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>About</title>
-        <link rel="icon" href="/img/weather.png">
-        <link rel = "stylesheet" href = "/css/styles.css">  <!-- href shows the access browser is gonna get and in our case its directory we made public so that acts as the base-->
-    </head>
 
-    <body>
-        <div class="main-content">
-            {{>header}}  <!--rendering partials -->
-        
-        <img class="potrait" src = "/img/node.png">
-        </div>
-        
-       {{>footer}}  <!--rendering partials -->
-     <!--  <p>
-            <h1>{{title}}</h1>      handlebar syntax to include data sent from node title here is a varible getting its value from fn from where call to this page is made
-             <img src = "/img/node.png">
-        </p> -->
-    </body>
+<head>
+    <title>About</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <img class="portrait" src="/img/node.png">
+    </div>
+    
+    {{>footer}}
+</body>
+
 </html>
